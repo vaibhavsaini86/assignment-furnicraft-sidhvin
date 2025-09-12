@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body class="overflow-x-hidden">
+    <section class="bg-white top-0 sticky">
+      <div class="flex justify-between items-center p-4">
+        <h1 class="text-black text-2xl px-7">FurniCraft</h1>
+        <nav>
+          <ul class="hidden md:flex text-black space-x-6 p-7">
+            <li>Livingroom</li>
+            <li>Bedroom</li>
+            <li>Diningroom</li>
+            <li>Office</li>
+            <li>Storage</li>
+          </ul>
+          <button id="menu-btn" class="md:hidden text-black focus:outline-none px-7">
+               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+               </svg> 
+          </button>
+        </nav>
+      </div>
+    </section>
+     <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+
+     <div id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-2/3 max-w-sm bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 flex flex-col space-y-6 p-6">
+      <div class="flex justify-between items-center p-4 border-b">
+        <h2 class="text-lg text-black font-bold">Menu</h2>
+        <button id="close-menu" class="self-end text-3xl text-gray-600 hover:text-black">&times;</button>
+      </div>  
+      <a href="#" class="block text-black hover:text-gray-600">Livingroom</a>
+      <a href="#" class="block text-black hover:text-gray-600">Bedroom</a>
+      <a href="#" class="block text-black hover:text-gray-600">Diningroom</a>
+      <a href="#" class="block text-black hover:text-gray-600">Office</a>
+      <a href="#" class="block text-black hover:text-gray-600">Storage</a>
+      </div>
+   
+    <section class="bg-white mt-0">
+      <div class="flex flex-col xl:grid grid-cols-2 gap-3 ">
+        <div class="flex flex-col my-28 space-y-14 px-6  ">
+          <h1 class="text-4xl md:text-6xl max-w-lg  sm:text-6xl text-black">Transfer Your Living Space</h1>
+          <p class=" text-sm md:max-w-lg  sm:text-base text-black">
+            Discover premium furniture that combines exceptional design with
+            unmatched comfort. Create the home you've always dreamed of with our
+            curated collection.
+          </p>
+          <div class="flex flex-col md:flex-row md:space-x-6 space-y-5 md:space-y-0 ">
+            <button class=" bg-black text-white w-ful md:w-auto py-1.5 px-4 rounded-md ">
+              Explore collection
+            </button>
+            <button
+              class=" w-full md:w-auto bg-white text-black py-1.5 px-4 rounded-md border border-black hover:bg-gray-200 "
+            >
+              Design collection
+            </button>
+          </div>
+          <div class="flex space-x-10  md:px-14 md:space-x-24 sm:flex sm:space-x-10 mt-20">
+            <div class="flex-col">
+              <h3 class="text-black font-bold text-2xl">500+</h3>
+              <p class="text-black text-sm">Premium products</p>
+            </div>
+            <div class="flex-col">
+              <h3 class="text-black font-bold text-2xl">10k</h3>
+              <p class="text-black text-sm">Happy customers</p>
+            </div>
+            <div class="flex-col">
+              <h3 class="text-black font-bold text-2xl">15+</h3>
+              <p class="text-black text-sm">Years of experience</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <figure>
+            <img
+              class="  max-h-fit md:px-14  sm:rounded-4xl px-4 mt-0 h-screen pb-5"
+              src="https://images.unsplash.com/photo-1662059360215-f727513c534b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmdXJuaXR1cmUlMjBsaXZpbmclMjByb29tJTIwaW50ZXJpb3IlMjBkZXNpZ258ZW58MXx8fHwxNzU2NzE1MDk2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              alt=""
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-20">
+      <div class="flex flex-col space-y-10 md:flex md:flex-col md:space-y-10  sm:grid grid-rows-2 sm:space-y-24">
+        <div class="sm:flex flex-col space-y-4 items-center">
+          <h2 class="text-4xl text-black text-center font-bold">
+            Shop by category
+          </h2>
+          <p class="text-base max-w-[40rem] text-black text-center font-thin">
+            Discover furniture for every room in your home. From cozy living
+            spaces to productive work areas.
+          </p>
+        </div> 
+        <div class="flex flex-col  space-y-5  md:grid md:grid-cols-2  md:space-y-0 md:gap-5  lg:grid lg:grid-cols-2 lg:gap-5  xl:flex xl:flex-row xl:space-y-0 xl:space-x-5 mx-auto max-w-6xl ">
+          <figure class="w-fit h-fit aspect-square mx-4 md:w-64 md:h-64  sm:w-64 sm:h-64 relative group">
+            <img
+              class="w-full h-full object-cover rounded-xl transform transition duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:-translate-y-2 "
+              src="
+https://images.unsplash.com/photo-1547062200-f195b1c77e30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaW5pbmclMjByb29tJTIwdGFibGUlMjBjaGFpcnN8ZW58MXx8fHwxNzU2NjEzOTEwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              alt=""
+            />
+            <div class="absolute bottom-2 left-2 w-64 text-white">
+              <p class="text-lg font-bold ">Dinning room</p>
+              <p class="text-sm">85+ items</p>
+            </div>
+          </figure>
+          <figure class="w-fit h-fit aspect-square mx-4 sm:w-64 sm:h-64 relative group ">
+            <img
+              class="w-full h-full object-cover rounded-xl transform transition duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:-translate-y-2"
+              src="https://images.unsplash.com/photo-1603192399946-8bbb0703cfc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaXZpbmclMjByb29tJTIwc29mYSUyMG1vZGVybnxlbnwxfHx8fDE3NTY3MTUxMTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              alt=""
+            />
+            <div class="absolute bottom-2 left-2 w-64 text-white">
+              <p class="text-lg font-bold ">Bedroom</p>
+              <p class="text-sm">95+ items</p>
+            </div>
+          </figure>
+          <figure class="w-fit h-fit aspect-square mx-4 sm:w-64 sm:h-64 relative group">
+            <img
+              class="w-full h-full object-cover rounded-xl transform transition duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:-translate-y-2"
+              src="https://images.unsplash.com/photo-1680503146454-04ac81a63550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWRyb29tJTIwZnVybml0dXJlJTIwYmVkfGVufDF8fHx8MTc1NjY0ODY3N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              alt=""
+            />
+            <div class="absolute bottom-2 left-2 w-64 text-white">
+              <p class="text-lg font-bold">Office</p>
+              <p class="text-sm">65+ items</p>
+            </div>
+          </figure>
+          <figure class="w-fit h-fit aspect-square mx-4 sm:w-64 sm:h-64 relative group">
+            <img
+              class="w-full h-full object-cover rounded-xl transform transition duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:-translate-y-2"
+              src="https://images.unsplash.com/photo-1582327267907-7634b769b06b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBkZXNrJTIwY2hhaXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzU2NzE1MTIyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              alt=""
+            />
+            <div class="absolute bottom-2 left-2 w-64 text-white">
+              <p class="text-lg font-bold">Living room</p>
+              <p class="text-sm">120+ items</p>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-50  py-24">
+        <div class="flex flex-col space-y-10 ">
+          <div class="flex flex-col space-y-4 items-center">
+            <h2 class="text-4xl text-black text-center font-bold">Featured Collection</h2>
+            <p class="text-sm text-black text-center">Handpicked furniture pieces that blend style, comfort, and functionality for your modern home.</p>                                                                                                                                                                                                                                                          
+          </div>
+         
+          <div class="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  gap-8 max-w-6xl mx-auto ">
+            <div class= "bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transform transition duration-300 hover:-translate-y-2" onclick="openModal('Living room','Modern 3-Seater Sofa', '₹45,000', 'Description', 'Premium 3-seater sofa with memory foam cushioning and durable fabric upholstery. Perfect for modern living rooms with its sleek design and exceptional comfort.', 'Specification', 'Dimension:82W X 36D X 32H\nMemory foam cushions\nSolid hardwood frame\nStain-resistant fabric\nAssembly required', 'https://images.unsplash.com/photo-1557618159-7d6fe547ae20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080')">
+              
+              <figure>
+                <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1557618159-7d6fe547ae20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzb2ZhJTIwZnVybml0dXJlfGVufDF8fHx8MTc1NjYyNzQwOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="">
+              </figure>
+              <div class="p-4 text-center">
+                <p class=" text-gray-600">Living room</p>
+                <h3 class="text-lg font-semibold text-gray-800">Modern 3-Seater Sofa</h3>
+                <p class="text-black">₹45,000</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transform transition duration-300 hover:-translate-y-2" onclick="openModal('Dining Room', 'Oak Dinning Table Set ', '₹38,000', 'Description', 'Elegant oak dining table set with 6 matching chairs. Crafted from solid oak wood with a natural finish that highlights the beautiful wood grain.', 'Specification', 'Table: 72 L x 36 W x 30 H\nSolid oak construction\nSeats 6 people comfortably\nNatural wood finish\nChairs included', 'https://images.unsplash.com/photo-1547582538-8e3598d60244?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBkaW5pbmclMjB0YWJsZXxlbnwxfHx8fDE3NTY2OTIxNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')">
+              <figure>
+                <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1547582538-8e3598d60244?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBkaW5pbmclMjB0YWJsZXxlbnwxfHx8fDE3NTY2OTIxNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="">
+              </figure>
+              <div class="p-4 text-center">
+                <p class="text-gray-600">Dining room</p>
+                <h3 class="text-lg font-semibold text-gray-800">Oak Dining Table Set</h3>
+                <p class="text-gray-600">₹38,000</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transform transition duration-300 hover:-translate-y-2" onclick="openModal('Bedroom','Platform bed frame', '₹28,000', 'Description', 'Minimalist platform bed frame with clean lines and sturdy construction. Features built-in storage drawers for maximum space efficiency.', 'Specification','Queen size: 60 W x 80 L\nBuilt-in storage drawers\nSolid wood construction\nLow-profile design\nMatress not included', 'https://images.unsplash.com/photo-1550926807-a6d0500b6502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwbGF0Zm9ybSUyMGJlZHxlbnwxfHx8fDE3NTY3MTUxODF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')">
+              <figure>
+                <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1550926807-a6d0500b6502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwbGF0Zm9ybSUyMGJlZHxlbnwxfHx8fDE3NTY3MTUxODF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="">
+              </figure>
+              <div class="p-4 text-center">
+                <p class="text-gray-600">Bedroom</p>
+                <h3 class="text-lg font-semibold text-gray-800">Platform Bed Frame</h3>
+                <p class="text-gray-600">₹28,000</p>
+              </div>
+            </div>  
+            <div class="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transform translation duration-300 hover:-translate-y-2" onclick="openModal('Office', 'Executive Office Chair', '₹15,000', 'Description', 'Ergonomic executive office chair with premium leather upholstery and adjustable features. Designed for all-day comfort and professional appearance.', 'Specification', 'Premium leather upholstery\nAdjustable height\n360-degree swivel\n5-year warranty', 'https://images.unsplash.com/photo-1651936717122-77e95cc1ba78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBvZmZpY2UlMjBjaGFpcnxlbnwxfHx8fDE3NTY3MTUxOTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')">
+              <figure>
+                <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1651936717122-77e95cc1ba78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBvZmZpY2UlMjBjaGFpcnxlbnwxfHx8fDE3NTY3MTUxOTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="">
+              </figure>
+              <div class="p-4 text-center"> 
+                <p class="text-gray-600">Office</p>
+                <h3 class="text-lg font-semibold text-gray-800">Executive Office Chair</h3>
+                <p class="text-gray-600">₹15,000</p>
+              </div>
+            </div>  
+            <div class="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transform transition duration-300 hover:-translate-y-2" onclick=" openModal('Storage', 'Industrial Bookshelf', '₹22,000', 'Description', 'Industrial-style bookshelf with metal frame and wood shelves. Perfect for displaying books, decor, and personal items with a modern industrial aesthetic.', 'Specification', '5-tier shelving unit\nMetal frame with wood shelves\nMetal frame with wood shelves\nAnti-tip hardware included\nEasy assembly', 'https://images.unsplash.com/photo-1739035489259-baf9495e2bf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwYm9va3NoZWxmJTIwc3RvcmFnZXxlbnwxfHx8fDE3NTY3MTUxOTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')">
+              <figure>
+                <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1739035489259-baf9495e2bf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwYm9va3NoZWxmJTIwc3RvcmFnZXxlbnwxfHx8fDE3NTY3MTUxOTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="">
+              </figure>
+              <div class="p-4 text-center">
+                <p class="text-gray-600">Storage</p>
+                <h3 class="text-lg font-semibold text-gray-800">Industrial Bookshelf</h3>
+                <p class="text-gray-600">₹22,000</p>
+              </div>
+            </div> 
+            <div class="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transform translate duration-300 hover:-translate-y-2" onclick=" openModal('Living Room','Glass Coffee Table', '₹18,000', 'Description', 'Contemporary glass coffee table with sleek metal legs. The transparent top creates an airy feel while providing ample surface space for your living room.', 'Specification', 'Tempered glass top\nChrome metal legs\nDimensions: 48 L x 24 W x 16 H\nEasy to clean\nModern Contemporary Design', 'https://images.unsplash.com/photo-1656699170530-21004fb9ec2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbGFzcyUyMGNvZmZlZSUyMHRhYmxlJTIwbW9kZXJufGVufDF8fHx8MTc1NjcxNTE5OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')">
+              <figure>
+                <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1656699170530-21004fb9ec2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbGFzcyUyMGNvZmZlZSUyMHRhYmxlJTIwbW9kZXJufGVufDF8fHx8MTc1NjcxNTE5OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="">
+              </figure>
+              <div class="p-4 text-center">
+                <p class="text-gray-600">Living room</p>
+                <h3 class="text-lg font-semibold text-gray-800">Glass coffee Table</h3>
+                <p class="text-gray-600">₹18,000</p>
+              </div>
+            </div>     
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="productModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+      <div class="bg-white rounded-lg shadow-lg w-11/12 sm:w-11/12 md:w-11/12 lg:w-2/3 xl:w-1/2 relative max-h-[90vh] overflow-y-auto">
+         <div class="sticky top-0 bg-white z-10 flex justify-between items-center mb-4">
+           <h2 class="text-xl font-bold text-gray-800 p-4">Product Details</h2>
+           <button onclick="closeModal()" class="text-gray-500 hover:text-black text-2xl p-4">&times;</button>
+         </div>
+          <div class="flex flex-col  lg:grid lg:grid-cols-2 gap-6 p-6">
+           <div class="flex justify-center items-start">
+            <img id="modalImage" class="w-full h-64 sm:h-72 md:h-80 lg:h-[45vh] object-cover rounded-md" src="" alt=""> 
+          </div> 
+          <div class="flex flex-col space-y-4">
+            <div>
+              <h4 id="modalType" class="text-lg text-gray-400"></h4>       
+              <h3 id="modalName" class="text-xl font-bold text-gray-800"></h3>
+              <p id="modalPrice" class="text-lg text-black mt-2"></p>
+              <p id="modalDes" class="font-bold text-black"></p>
+              <p id="modalDesc" class="text-gray-600 mt-3"></p>
+              <p id="modalSpec" class="font-bold text-black"></p>
+              <p id="modalSpecL" class="list-disc text-gray-400 mt-1"></p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <h4 class="font-bold text-gray-800 mb-2">Service Information</h4>
+              <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Free delivery on orders above ₹25,000</li>
+                <li>EMI options available</li>
+                <li>30-day return policy</li>
+                <li>Professional assembly service available</li>
+              </ul>
+            </div> 
+          </div>
+        </div>          
+      </div>
+    </div>
+    <section class="bg-black py-20 ">
+        <div class="flex flex-col space-y-6 items-center">
+          <h3 class="text-2xl text-white text-center">Stay Updated with Our Latest Collections</h3>
+          <p class="text-base text-gray-300 text-center max-w-[40rem]">Get exclusive access to new arrivals, special offers, and interior design tips delivered directly to your inbox</p>
+          <div class="flex flex-row space-x-4">
+            <form action="#" class="form">
+              <input type="email" class="input  bg-white text-black outline-none pl-2 pr-12 rounded-sm" placeholder="Enter your email address">
+            </form>
+            <button class="text-black bg-gray-50 hover:bg-gray-200 px-2 rounded-sm">Subscribe</button>
+          </div>
+          <p class="text-sm text-gray-400 text-center">No spam, unsubscribe at any time. We respect your privacy.</p>
+
+        </div>
+
+    </section>
+    <section class="bg-white  px-6 py-16">
+      <div class=" sm:flex flex-col space-y-8 items-center ">
+        <h3 class="text-black text-4xl font-bold text-center">Get in touch</h3>
+        <P class=" max-w-[22rem] px-4 sm:text-sm text-gray-600 text-center sm:max-w-[40rem]">Have questions about our furniture? Need design consultation? We're here to help you create your perfect living space.</P>
+        <div class="flex flex-col xl:grid grid-cols-3 gap-10 ">
+          <div class="ml-0 sm:flex flex-col space-y-6">
+            <h4 class="text-sm text-black font-bold">Contact Information</h4>
+            
+              <div class="flex flex-col">
+                <h4 class="text-base text-black">Address</h4>
+                <p class="text-sm  text-gray-600">42 Design Avenue, Furniture District Mumbai, Maharashtra 400001 India</p>
+              </div>
+              <div class="flex flex-col">
+                <h4 class="text-base text-black">Phone</h4>
+                <p class="text-sm font-thin text-gray-600">+91 98765 43210</p>
+              </div>
+              <div class="flex flex-col">
+                <h4 class="text-base text-black">email</h4>
+                <p class="text-sm font-thin text-gray-600">hello@furnicraft.com</p>
+              </div>
+              <div class="flex flex-col">
+                <h4 class="text-base text-black">Store hours</h4>
+                <p class="text-sm font-thin text-gray-600">Monday - Saturday: 10:00 AM - 8:00 PM Sunday: 11:00 AM - 6:00 PM</p>
+              </div>
+              <section class="w-fit bg-gray-100 sm:bg-gray-100 rounded-2xl  p-5">
+                <div class="flex flex-col space-y-4">
+                  <p class="text-base text-black">Visit Our Showroom</p>
+                  <p class="text-sm text-gray-400">Experience our furniture collections in person. Our design consultants are available to help you choose the perfect pieces for your home.</p>
+                  <button class="bg-white text-black px-20 hover:bg-gray-200 rounded-md border border-gray-200">Get Directions</button>
+                </div>
+              </section>
+          </div>
+          <div class="sm:col-span-2">
+            <section class="w-full sm:bg-white p-5 rounded-xl border border-gray-300">
+              <div class="container">
+              <div class="flex flex-col space-y-8">
+                <p class="text-black font-bold text-lg">Send us a Message</p>
+                <form action="#">
+                  <div class="grid-cols-1  space-y-3 sm:flex flex-row space-x-3">
+                    <div class="flex flex-col">
+                      <label for="name" class="text-black">*Name</label>
+                      <input type="text" class="bg-gray-100 text-gray-600 rounded-md" placeholder="Your full name">
+                    </div>
+                    <div class="flex flex-col">
+                      <label for="email" class="text-black">*Email</label>
+                      <input type="email" class="bg-gray-100 text-gray-600 rounded-md" placeholder="your.email@example.com">
+                    </div>
+                  </div>
+                </form>
+                <form action="#">
+                  <div class="grid-cols-1 space-y-3 sm:flex flex-row space-x-3">
+                    <div class="flex flex-col">
+                      <label for="Phone" class="text-black">*Phone</label>
+                      <input type="number" class="bg-gray-100 text-gray-600 rounded-md" placeholder="+91 9876543210">
+                    </div>
+                    <div class="flex flex-col">
+                      <label for="text" class="text-black">Subject</label>
+                      <input type="text" class="bg-gray-100 text-gray-600 rounded-md" placeholder="How can we help you?">
+                    </div>
+                  </div>
+                </form>
+                <form>
+                  <div class="flex flex-col space-y-2">
+                    <label for="message" class="text-black">Message*</label>
+                    <textarea id="message" rows="2" class="bg-gray-100 text-gray-600 p-2 rounded-md resize-none" placeholder="Tell us about your furniture needs, preferred style, budget, or any specific requirements..."></textarea>
+                  </div>
+                </form>
+                <button class="bg-black text-white hover:bg-blue-950 p-2 rounded-xl">Send Message</button>
+              </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-50 p-5 py-20 ">
+      <div class="flex flex-col space-y-28">
+      <div class="flex flex-col  space-y-8 sm:grid grid-cols-4">
+        <div class="ml-1 sm:flex flex-col space-y-5 mx-10">
+          <h4 class="text-2xl text-black font-bold">FurniCraft</h4>
+          <p class="max-w-[16rem] sm:text-sm text-gray-700 sm:max-w-[24rem]">Transform your living space with our premium furniture collection. Quality craftsmanship meets modern design.</p>
+        </div>
+        <div class="flex flex-col">
+          <h4 class="text-black text-base font-bold">Quick links</h4>
+          <p class="text-gray-700 text-sm">Livingroom</p>
+          <p class="text-gray-700 text-sm">Bedroom</p>
+          <p class="text-gray-700 text-sm">Diningroom</p>
+          <p class="text-gray-700 text-sm">Office</p>
+          <p class="text-gray-700 text-sm">Storage</p>
+        </div>
+        <div class="flex flex-col">
+          <h4 class="text-black text-base font-bold">Customer service</h4>
+          <p class="text-gray-700 text-sm">Contact Us</p>
+          <p class="text-gray-700 text-sm">Delivery Information</p>
+          <p class="text-gray-700 text-sm">Returns & Exchanges</p>
+          <p class="text-gray-700 text-sm">Returns & Exchanges</p>
+          <p class="text-gray-700 text-sm">Warranty</p>
+          <p class="text-gray-700 text-sm">Assembly Service</p>
+        </div>
+        <div class="flex flex-col space-y-5">
+          <h4 class="text-black text-base font-bold">Contact Info</h4>
+          <p class="w-32 text-gray-700 sm:text-gray-700 text-sm">42 Design Avenue Mumbai, Maharashtra 400001</p>
+          <p class="text-gray-700 text-sm">+91 98765 43210</p>
+          <p class="text-gray-700 text-sm">hello@furnicraft.com</p>
+        </div>
+      </div>
+  
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0 px-6 sm:px-40">
+        <p class="text-gray-500">© 2025 FurniCraft. All rights reserved.</p>
+        <ul class="flex text-gray-500 gap-5">
+          <li>Privacy policy</li>
+          <li>terms of use</li>
+          <li>cookies</li>
+        </ul>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+  const menuBtn = document.getElementById("menu-btn");   
+  const mobileMenu = document.getElementById("mobile-menu"); 
+  const closeMenu = document.getElementById("close-menu");  
+  const overlay = document.getElementById("overlay");        
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("translate-x-full"); 
+    mobileMenu.classList.add("translate-x-0");
+    overlay.classList.remove("hidden"); 
+  });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("translate-x-0");
+    mobileMenu.classList.add("translate-x-full"); 
+    overlay.classList.add("hidden"); 
+  }
+
+  closeMenu.addEventListener("click", closeMobileMenu);
+  overlay.addEventListener("click", closeMobileMenu);
+</script>
+
+    
+    
+    
+    
+    
+    
+    <!-- <script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const closeMenu = document.getElementById("close-menu");
+
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("translate-x-full");
+    mobileMenu.classList.add("translate-x-0");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("translate-x-0");
+    mobileMenu.classList.add("translate-x-full");
+  });
+    </script> -->
+
+    <script>
+  function openModal(type,name, price, des, desc, spec, specL, img) {
+    document.getElementById("modalType").textContent=type
+    document.getElementById("modalName").textContent = name;
+    document.getElementById("modalPrice").textContent = price;
+    document.getElementById("modalDes").textContent = des;
+    document.getElementById("modalDesc").textContent = desc;
+    document.getElementById("modalSpec").textContent = spec;
+    document.getElementById("modalSpecL").textContent = specL;
+    document.getElementById("modalImage").src = img;
+    document.getElementById("productModal").classList.remove("hidden");
+  }
+
+  function closeModal() {
+    document.getElementById("productModal").classList.add("hidden");
+  }
+</script>
+  </body>
+</html>
